@@ -1,0 +1,651 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    width: 100%;
+    height: calc(100% - 100px);
+    font-family: 'NanumSquareRound',sans-serif;
+    background-color: #f6f6f8;
+}
+.top_bar
+{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(250,250,251);
+    z-index: 100;
+}
+.top_logo
+{
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+.user_logout
+{
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.user_name
+{
+    font-size: 20px;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+.logout{
+    font-size: 20px;
+    color: #adafb3;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+
+
+.search_wrap
+{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.top_menu
+{
+    position: fixed;
+    display: flex;
+    
+    height: 74px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #f6f6f8;
+    z-index: 100;
+}
+
+.search_name
+{
+    display: flex;
+    align-items: center;
+}
+.search_name span
+{
+    margin-left: 9px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.search_dropdown_wrap
+{
+    background-color: white;
+    margin-left: 16px;
+    border-radius: 20px;
+}
+
+.search_dropdown
+{
+    font-size: 14px;
+    width: 265px;
+    height: 40px;
+    font-weight: 700;
+    border: none;
+    padding-left: 16px;
+    appearance: none;
+    background: url(./search_img/dropdown_button.png) no-repeat 100%;
+}
+
+
+
+.search_dropdown:focus
+{
+    outline: none;
+}
+.search_text
+{
+    width: 686px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    border-left: 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.search_text input
+{
+    border-radius: 20px;
+    width: 590px;
+    height: 40px;
+    border: none;
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.search_text div
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #919499;
+}
+
+.search_text input:focus
+{
+    outline: none;
+}
+
+#search_year_start
+{
+    text-align: center;
+    width: 90px;
+}
+#search_month_start
+{
+    text-align: center;
+    width: 81px;
+}
+
+#search_day_start
+{
+    text-align: center;
+    width: 81px;
+}
+
+#search_year_end
+{
+    text-align: center;
+    width: 90px;
+}
+#search_month_end
+{
+    text-align: center;
+    width: 81px;
+}
+
+#search_day_end
+{
+    text-align: center;
+    width: 81px;
+}
+
+.search_text button
+{
+    width: 90px;
+    height: 28px;
+    border: none;
+    background-color: #f28234;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.search_text button div{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.view_foramt_dropdown
+{
+    margin-left: 43px;
+    border: none;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 800;
+    appearance: none;
+    background: url(./search_img/dropdown_button_2.png) no-repeat 100%;
+
+}
+
+.view_foramt_dropdown:focus
+{
+    outline: none;
+}
+
+
+
+.contents_wrap
+{
+    width: 100%;
+    position: relative;
+    top: 58px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.contents_wrap::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+.contents_wrap::-webkit-scrollbar-thumb
+{
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.contents_wrap::-webkit-scrollbar-track
+{
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/*###############  썸네일 형태 ######################*/
+
+.thumbnail_contents
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.contents_row
+{
+    
+    display: flex;
+    width: 1116px;
+    height: 374px;
+    margin-bottom: 40px;
+}
+.file_wrap
+{
+    position: relative;
+    width: 343px;
+    height: 374px;
+    margin-right: 29px;
+}
+
+.file_num
+{
+    margin-left: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #313233;
+}
+.file_description
+{
+    width: 342px;
+    height: 350px;
+    border-radius: 15px;
+    border: solid 1px #dadce0;
+    box-shadow: 2px 2px 10px #dadce0;
+    z-index: 5;
+}
+
+.file_description_focus
+{
+    border : 3px solid #f28234
+}
+
+
+.file_thumbnail img
+{
+    width : 340px;
+    height : 191px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.file_image_num
+{
+    width: 54px;
+    height: 24px;
+    background-color: rgb(255, 255, 255, 0.85);
+    border-radius: 4px;
+    position: absolute;
+    top: 190px;
+    left: 280px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.file_data
+{
+    margin-left: 16px;
+    width: 311px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+}
+
+.flex-row
+{
+    display: flex;
+}
+
+.file_name
+{
+    margin-left: 8px;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.file_user_date
+{
+    margin-left: 8px;
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #313233;
+    opacity: 0.6;
+}
+
+.file_message
+{
+    width: 330px;
+    height: 22px;
+    margin-left: 16px;
+    font-size: 11px;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+/*#############  목록형 형태  ##################*/
+.list_contents{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--top_description 고정 안되어 있음 고정 하려면 next previous 버튼 위치 설정 해줘야 함*/
+.top_description
+{
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(49, 50, 51, 0.8);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+    background-color: #f6f6f8;
+    z-index: 100;
+    padding-top: 32px;
+}
+
+.top_description div
+{
+    display: flex;
+    align-items: center;
+}
+
+
+.list_contents_ul
+{
+    position: relative;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    font-family: "Roboto";
+    
+}
+
+.list_contents_li 
+{
+    display: flex;
+    height: 100px;
+    margin-bottom: 15px;
+    width: 1200px;
+    border-radius: 13px;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    
+}
+.list_contents_li_focus
+{
+    border: solid 2px #f28234;
+}
+
+.list_contents_li div
+{
+    display: flex;
+    align-items: center;
+    
+}
+
+.click_background
+{
+    background-color: rgb(242, 130, 52, 0.4);
+}
+.over_background
+{
+    background-color: rgb(242, 130, 52, 0.1);
+}
+.list_file_num
+{
+    display: flex;
+    justify-content: center;
+    width: 79px;
+    font-size: 16px;
+    color: #313233;
+}
+.list_file_images_num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 157px;
+    top: 64px;
+    font-size: 10px;
+    width: 44px;
+    height: 17px;
+    background-color: rgb(255, 255, 255, 0.85);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.list_file_image
+{
+    width: 127px;
+}
+
+.list_file_image img
+{
+    width: 127px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.list_file_name
+{
+    margin-left: 37px;
+    width: 264px;
+    font-size: 12px;
+    color: #313233;
+    font-weight: 500;
+}
+
+.list_file_mdate
+{
+    width: 140px;
+    font-size: 12px;
+    color: #313233;
+    font-weight: 500;
+}
+
+.list_file_coordn
+{
+    width: 167px;
+    font-size: 12px;
+    color: #313233;
+    font-weight: bold;
+}
+
+.list_file_desc
+{
+    margin-left: 19px;
+    width: 166px;
+    font-size: 11px;
+    color: #313233;
+    font-weight: 500;
+}
+
+.view_down{
+    width: 100px;
+    height: 68px;
+    display: flex;
+    margin-left: 62px;
+    flex-direction: column;
+    font-family: 'NanumSquareRound';
+}
+
+
+.view_down button
+{
+
+    background-color: #f28234;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view_down span
+{
+    margin-left: 6px;
+}
+
+.btn_wrap{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_wrap button
+{
+    width: 151px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #f28234;
+    color: white;
+    font-family: "NanumSquareRound";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+
+/*###################### 이전 다음 버튼 #####################*/
+
+.previous_next
+{
+    margin-top: 75px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.inactive
+{
+    opacity: 0.5;
+}
+
+.previous_next button
+{
+    width: 167px;
+    height: 44px;
+    border-radius: 22px;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #313233;
+}
+
+.previous_btn{
+    padding-right: 18px;
+}
+
+.next_btn{
+    padding-left: 18px;
+}
+
+/*#############  공통적인 부분  ##################*/
+.display_none
+{
+    display: none;
+}
+
+
+/* 210727추가 */
+.file_thumbnail {
+    width: 341px;
+    height: 192px;
+  }
+  .file_description {
+    overflow: hidden;
+  }
+  
+  .list_iframe {
+    width: 126px;
+    height: 71px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .list_file_image {
+    width: 128px;
+    height: 72px;
+  }
+  .list_veil {
+    position: absolute;
+    width: 127px;
+    height: 72px;
+  }
+  .file_veil {
+    position: absolute;
+    top: 30px;
+    width: 340px;
+    height: 270px;
+  }
